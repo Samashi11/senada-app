@@ -63,7 +63,7 @@ import { useEffect } from "react";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import HeroSection from "../Components/HeroSection";
-import PrayerTimes from "../Components/PrayerTimes";
+// import PrayerTimes from "../Components/PrayerTimes";
 import IntroSection from "../Components/IntroSection";
 import ProgramBento from "../Components/ProgramBento";
 import QuoteSection from "../Components/QuoteSection";
@@ -107,7 +107,7 @@ export default function Home() {
 
             <main>
                 <HeroSection />
-                <PrayerTimes />
+                {/* <PrayerTimes /> */}
                 <IntroSection />
                 <ProgramBento />
                 <QuoteSection />

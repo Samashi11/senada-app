@@ -14,6 +14,16 @@ return new class extends Migration {
             $table->enum('status', ['Upcoming', 'Ongoing', 'Completed', 'Open Registration'])->default('Upcoming');
             $table->string('title', 150);
             $table->date('date')->nullable();
+
+            // --- KOLOM BARU MULAI DI SINI ---
+            $table->string('time')->nullable(); // Contoh: "08:00 - 15:00 WIB"
+            $table->string('capacity')->nullable(); // Contoh: "100 Peserta"
+            $table->integer('fee')->default(0); // Pakai integer (angka). 0 = Gratis
+            $table->date('registration_deadline')->nullable();
+            $table->json('objectives')->nullable(); // Menyimpan list tujuan pembelajaran
+            $table->json('speakers')->nullable(); // Menyimpan data pemateri (Nama, Foto, Role)
+            // --- BATAS KOLOM BARU ---
+
             $table->string('location')->nullable();
             $table->text('desc');
             $table->string('image')->nullable();

@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Models\Activity;
 
 // Paksa root URL untuk merender komponen Home.jsx milikmu
 Route::get('/', function () {
@@ -11,9 +12,21 @@ Route::get('/', function () {
 });
 
 // Nanti tambahkan rute activities di sini
+
 Route::get('/activities', function () {
-    return Inertia::render('Activities');
+    return Inertia::render('Activities', [
+        // Mengambil semua data aktivitas dari database, diurutkan dari yang terbaru
+        'activities' => Activity::latest()->get()
+    ]);
 });
+
+// TAMBAHKAN RUTE BARU INI
+Route::get('/activities/{activity}', function (Activity $activity) {
+    return Inertia::render('ActivityDetail', [
+        'activity' => $activity
+    ]);
+})->name('activities.show');
+
 // Route::get('/', function () {
 //     return Inertia::render('Welcome', [
 //         'canLogin' => Route::has('login'),

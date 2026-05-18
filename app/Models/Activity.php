@@ -6,6 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Activity extends Model
 {
-    // Tambahkan ini agar Filament bisa menyimpan data ke kolom-kolom tersebut
     protected $guarded = [];
+
+    // Menyuruh Laravel mengubah data JSON menjadi Array secara otomatis
+    protected $casts = [
+        'objectives' => 'array',
+        'speakers' => 'array',
+    ];
 }
