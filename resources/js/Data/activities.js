@@ -1,0 +1,113 @@
+export const ACTIVITIES_DATA = [
+  {
+    id: 1,
+    type: "featured",
+    category: "Event Besar",
+    status: "Upcoming",
+    title: "GEMA RAMADHAN 1445H",
+    date: "MARCH 12, 2024",
+    location: "Main Hall STT NF",
+    desc: "Our flagship annual event celebrating the holy month with series of competitions, community breaking fast, and inspiring talks.",
+    participants: 120,
+    image:
+      "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=800",
+  },
+  // --- KATEGORI: KAJIAN ---
+  {
+    id: 2,
+    type: "small-text",
+    category: "Kajian",
+    status: "Ongoing",
+    title: "Tafsir Jalalain Weekly",
+    desc: "Deep dive into the meanings of Al-Qur'an every Tuesday after Maghrib at Al-Iman Mosque.",
+    schedule: "Every Tuesday",
+    icon: "menu_book",
+  },
+  {
+    id: 3,
+    type: "small-card",
+    category: "Kajian",
+    status: "Upcoming",
+    title: "Fiqh Muamalah Modern",
+    desc: "Membahas tuntas etika bisnis dan ekonomi Islam di era digital.",
+    date: "Every Friday",
+    image:
+      "https://images.unsplash.com/photo-1584281729055-e9999746173e?auto=format&fit=crop&q=80&w=800",
+  },
+  {
+    id: 4,
+    type: "small-text",
+    category: "Kajian",
+    status: "Ongoing",
+    title: "Tahsin Al-Qur'an",
+    desc: "Perbaikan bacaan Al-Qur'an intensif bagi mahasiswa tingkat dasar dan menengah.",
+    schedule: "Every Monday",
+    icon: "auto_stories",
+  },
+  // --- KATEGORI: SOSIAL ---
+  {
+    id: 5,
+    type: "small-card",
+    category: "Sosial",
+    status: "Completed",
+    title: "SENADA Berbagi",
+    desc: "Monthly charity program distributing meal boxes to those in need around Campus area.",
+    date: "Feb 24, 2024",
+    image:
+      "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=800",
+  },
+  {
+    id: 6,
+    type: "medium-wide",
+    category: "Sosial",
+    status: "Upcoming",
+    title: "Tech for Desa",
+    desc: "Program pengabdian masyarakat untuk mengajarkan literasi digital di desa terpencil.",
+    date: "May 20, 2024",
+    image:
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800",
+  },
+  {
+    id: 7,
+    type: "small-text",
+    category: "Sosial",
+    status: "Ongoing",
+    title: "Lumbung Pangan Mahasiswa",
+    desc: "Inisiatif penyediaan makanan gratis bagi mahasiswa yang membutuhkan selama masa ujian.",
+    schedule: "Exam Weeks",
+    icon: "volunteer_activism",
+  },
+  // --- KATEGORI: PELATIHAN ---
+  {
+    id: 8,
+    type: "medium-wide",
+    category: "Pelatihan",
+    status: "Open Registration",
+    title: "Leadership Training 1.0",
+    desc: "Develop your organizational skills and discover your leadership potential in our intensive weekend workshop.",
+    date: "June 05, 2024",
+    image:
+      "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=800",
+  },
+  {
+    id: 9,
+    type: "small-card",
+    category: "Pelatihan",
+    status: "Upcoming",
+    title: "Public Speaking Class",
+    desc: "Master the art of Da'wah and effective communication with professional trainers.",
+    date: "April 15, 2024",
+    image:
+      "https://images.unsplash.com/photo-1475721027785-f74dea327912?auto=format&fit=crop&q=80&w=800",
+  },
+  {
+    id: 10,
+    type: "small-text",
+    category: "Pelatihan",
+    status: "Ongoing",
+    title: "Mentoring Circles",
+    desc: "Small group discussions led by seniors to support your spiritual and academic journey.",
+    schedule: "Weekly Basis",
+    icon: "diversity_3",
+  },
+];
