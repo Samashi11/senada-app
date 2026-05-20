@@ -11,7 +11,7 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [isAboutOpen, setIsAboutOpen] = useState(false);
 
-    const {url} = usePage(); // Untuk mendeteksi halaman aktif
+    const { url } = usePage(); // Untuk mendeteksi halaman aktif
     // const location = useLocation(); // Untuk mendeteksi halaman aktif
 
     const getNextPrayer = (jadwal) => {
@@ -104,29 +104,60 @@ export default function Navbar() {
 
                     {/* Dropdown Tentang */}
                     <div className="relative group">
-                        <button className="flex items-center gap-1 text-on-surface-variant hover:text-secondary transition-colors focus:outline-none py-1">
+                        {/* Induk Tombol: Menyala jika URL saat ini ada di dalam ekosistem /about */}
+                        <button
+                            className={`flex items-center gap-1 font-label-md text-label-md transition-colors focus:outline-none py-1 ${
+                                url.startsWith("/about")
+                                    ? "text-primary border-b-2 border-primary pb-1"
+                                    : "text-on-surface-variant hover:text-primary"
+                            }`}
+                        >
                             Tentang
                             <span className="material-symbols-outlined text-sm leading-none transition-transform group-hover:rotate-180">
                                 expand_more
                             </span>
                         </button>
-                        <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-48 bg-surface-container rounded-[1rem] editorial-shadow border border-outline-variant/10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 overflow-hidden">
-                            <div className="py-2">
+
+                        {/* Kotak Dropdown */}
+                        <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-48 bg-surface-container rounded-xl shadow-lg border border-outline-variant/10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 overflow-hidden">
+                            <div className="py-2 flex flex-col">
                                 <Link
-                                    to="/about/structure"
-                                    className="block px-6 py-3 text-sm text-on-surface-variant hover:bg-surface-bright hover:text-secondary transition-colors"
+                                    href="/about"
+                                    className={`block px-6 py-3 text-sm transition-colors ${
+                                        url === "/about"
+                                            ? "bg-primary/10 text-primary font-bold border-l-4 border-primary"
+                                            : "text-on-surface-variant hover:bg-surface-bright hover:text-primary border-l-4 border-transparent"
+                                    }`}
+                                >
+                                    Tentang Kami
+                                </Link>
+                                <Link
+                                    href="/about/structure"
+                                    className={`block px-6 py-3 text-sm transition-colors ${
+                                        url === "/about/structure"
+                                            ? "bg-primary/10 text-primary font-bold border-l-4 border-primary"
+                                            : "text-on-surface-variant hover:bg-surface-bright hover:text-primary border-l-4 border-transparent"
+                                    }`}
                                 >
                                     Struktur
                                 </Link>
                                 <Link
-                                    to="/about/contact"
-                                    className="block px-6 py-3 text-sm text-on-surface-variant hover:bg-surface-bright hover:text-secondary transition-colors"
+                                    href="/about/contact"
+                                    className={`block px-6 py-3 text-sm transition-colors ${
+                                        url === "/about/contact"
+                                            ? "bg-primary/10 text-primary font-bold border-l-4 border-primary"
+                                            : "text-on-surface-variant hover:bg-surface-bright hover:text-primary border-l-4 border-transparent"
+                                    }`}
                                 >
                                     Hubungi Kami
                                 </Link>
                                 <Link
-                                    to="/about/gallery"
-                                    className="block px-6 py-3 text-sm text-on-surface-variant hover:bg-surface-bright hover:text-secondary transition-colors"
+                                    href="/about/gallery"
+                                    className={`block px-6 py-3 text-sm transition-colors ${
+                                        url === "/about/gallery"
+                                            ? "bg-primary/10 text-primary font-bold border-l-4 border-primary"
+                                            : "text-on-surface-variant hover:bg-surface-bright hover:text-primary border-l-4 border-transparent"
+                                    }`}
                                 >
                                     Galeri
                                 </Link>

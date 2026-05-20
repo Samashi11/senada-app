@@ -28,7 +28,7 @@ export default function Activities({ activities }) {
 
             <Navbar />
 
-            <main className="max-w-screen-2xl mx-auto px-margin-mobile md:px-margin-desktop py-lg">
+            <main className="max-w-screen-2xl mx-auto px-margin-mobile md:px-margin-desktop py-32">
                 {/* Hero Section */}
                 <section className="mb-xl">
                     <div className="flex flex-col md:flex-row justify-between items-end gap-md mb-lg">

@@ -14,11 +14,12 @@ export default function IntroSection() {
                     Membangun Generasi Madani di Era Digital
                 </h2>
                 <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                    SENADA University Islamic Organization hadir sebagai wadah
-                    bagi mahasiswa untuk mengeksplorasi nilai-nilai Islam yang
-                    relevan dengan dinamika zaman. Kami percaya bahwa kecerdasan
-                    intelektual harus berjalan selaras dengan ketenangan jiwa
-                    dan kepedulian sosial.
+                    Lembaga Dakwah Kampus SENADA Sekolah Tinggi Terpadu
+                    Teknologi Nurul Fikri hadir sebagai wadah bagi mahasiswa
+                    untuk mengeksplorasi nilai-nilai Islam yang relevan dengan
+                    dinamika zaman. Kami percaya bahwa kecerdasan intelektual
+                    harus berjalan selaras dengan ketenangan jiwa dan kepedulian
+                    sosial.
                 </p>
                 <div className="space-y-sm">
                     <div className="flex items-center gap-md">
@@ -45,6 +46,15 @@ export default function IntroSection() {
                             Kontribusi Nyata Untuk Masyarakat
                         </span>
                     </div>
+                    {/* <Link
+                        href="/about"
+                        className="text-primary font-label-md text-label-md flex items-center gap-xs hover:gap-md transition-all"
+                    >
+                        Selengkapnya Tentang Kami{" "}
+                        <span className="material-symbols-outlined">
+                            arrow_forward
+                        </span>
+                    </Link> */}
                 </div>
             </div>
         </section>

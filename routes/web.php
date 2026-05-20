@@ -27,6 +27,15 @@ Route::get('/activities/{activity}', function (Activity $activity) {
     ]);
 })->name('activities.show');
 
+Route::get('/articles', function () {
+    return Inertia::render('Articles');
+});
+
+Route::get('/about', function () {
+    return Inertia::render('About');
+});
+
+
 // Route::get('/', function () {
 //     return Inertia::render('Welcome', [
 //         'canLogin' => Route::has('login'),
